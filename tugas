@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Faktorial {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int angka;
+        int faktorial = 1;
+        
+        do {
+            System.out.print("Masukkan angka: ");
+            angka = input.nextInt();
+            
+            if (angka == 0) {
+                break; // keluar dari perulangan jika nilai angka = 0
+            }
+            
+            faktorial = 1;
+            for (int i = 1; i <= angka; i++) {
+                faktorial *= i; // melakukan perkalian faktorial
+            }
+            
+            System.out.println(angka + "! = " + faktorial);
+        } while (true); // perulangan akan terus berjalan sampai user menginputkan nilai 0
+        
+        System.out.println("Program selesai.");
+    }
+}
